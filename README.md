@@ -14,23 +14,23 @@ Each 3-dimensional "scene" viewable in the DataDiVR consists of a set of nodes. 
 
 Each of these objects - layouts, links, labels, and selections - are written as .csv files. These files can be found in the directories below relative to the home directory of the DataDiVR:
 
-> viveNet/Content/data/layouts
->  viveNet/Content/data/links
-> viveNet/Content/data/labels
->  viveNet/Content/data/Selections
+- viveNet/Content/data/layouts
+- viveNet/Content/data/links
+- viveNet/Content/data/labels
+-  viveNet/Content/data/Selections
 
 Any .csv files found in those directories (but not in any subfolders) will be read by the DataDiVR, and will be discoverable from inside the VR. The naming conventions enforced by the software are as follows:
 
  - Links are always paired to exactly one layout, though a layout may have multiple sets of links, or no links at all. To signal the association, the name of the links file must start with the name of the layout to which it is associated. For example, if a layout is called "awesome_1.csv", its associated links list(s) may be called "awesome_1.csv" (not a conflict since layouts and links are in separate folders), or "awesome_1_sometext.csv". 
  - At most one labels file may be associated with a layout. The names must match exactly.
- - If the name of the layout ends with _geo, the default view presented in the DataDiVR will feature a globe.
+ - If the name of the layout ends with "_geo", the default view presented in the DataDiVR will feature a globe.
 
 *You can check your file structure by running the **validate_file_structure.py** script.*
 
 ### File contents
 
 #### Layouts
-The layout files must be in csv format. The separator must be a comma, and no escaping separators is allowed. The columns are as follows:
+The layout files must be in csv format, with no header. The separator must be a comma, and no escaping separators is allowed. The columns are as follows:
 
  1. x-coordinate, a floating-point decimal between 0 and 1
  1. y-coordinate, a floating-point decimal between 0 and 1
@@ -44,7 +44,7 @@ The layout files must be in csv format. The separator must be a comma, and no es
 *You can check your layouts by running the **validate_layouts.py** script.*
 
 #### Links
-The links files are likewise in .csv format with the following format:
+The links files are likewise in .csv format with no header the following format:
 1. Node 1 ID, an integer between 0 and num(nodes) - 1. The ID is simply the 0-indexed number of the line in the corresponding layout in which the node is described.
 2. Node 2 ID, same as above.
 
