@@ -1,5 +1,5 @@
 # datadivr-demo
-This is the supporting code for the demo version of the DataDiVR, a virtual reality-based network visualization application, maintained by Sebastian Pirch, Felix Müller, Jen Iofinova, and others at the [Jörg Menche Lab](www.menchelab.com) at the [Center for Molecular Medicine](cemm.oeaw.at) of the Austrian Academy of Sciences, based in Vienna, Austria.
+This is the supporting code for the demo version of the DataDiVR, a virtual reality-based network visualization application, maintained by Sebastian Pirch, Felix Müller, Jen Iofinova, and others at the [Jörg Menche Lab](http://www.menchelab.com) at the [Center for Molecular Medicine](http://www.cemm.oeaw.ac.at) of the Austrian Academy of Sciences, based in Vienna, Austria.
 
 The visualization software itself can be downloaded using the script download_software.py. Note that for now this is not publicly available and the download is password-protected. Please contact us or file a support request in this github project if you would like to partner with us to apply the DataDiVR to your project.
 
