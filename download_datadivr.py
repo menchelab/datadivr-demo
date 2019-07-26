@@ -31,11 +31,14 @@ url = 'http://asimov.westeurope.cloudapp.azure.com:8080/datadivr/DataDiVR.zip'
 print("Downloading from ", url)
 
 r = requests.get(url, auth=(username,password))
-print("Download done!")
+print("Download done! Writing zipfile to disk.")
 
 with open(DATADIVR_ZIP_PATH, 'wb') as file:
     for chunk in r.iter_content():
         file.write(chunk)
+print("File written! Unzipping and writing to %s." % DATADIVR_PATH)
 
 with zipfile.ZipFile(DATADIVR_ZIP_PATH, 'r') as zip_ref:
     zip_ref.extractall(DATADIVR_PATH)
+
+os.remove(DATADIVR_ZIP_PATH)
