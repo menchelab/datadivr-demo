@@ -1,10 +1,16 @@
-import requests
-import zipfile
-import shutil
+import argparse
 import os
+import requests
+import shutil
 import sys
+import zipfile
 
-username_password_path = os.path.join(os.getcwd(), "ballmer.auth")
+ap = argparse.ArgumentParser()
+ap.add_argument("-a", "--auth-file", required=True,
+                help="Path to file containing authentication information.")
+args = vars(ap.parse_args())
+
+username_password_path = args["auth_file"]
 DATADIVR_ZIP_PATH = os.path.realpath(os.path.join(os.path.dirname(os.getcwd()), "datadivr.zip"))
 DATADIVR_PATH = os.path.realpath(os.path.join(os.path.dirname(os.getcwd())))
 
