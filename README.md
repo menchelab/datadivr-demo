@@ -21,7 +21,7 @@ Each of these objects - layouts, links, labels, and selections - are written as 
 
 Any .csv files found in those directories (but not in any subfolders) will be read by the DataDiVR, and will be discoverable from inside the VR. The naming conventions enforced by the software are as follows:
 
- - Links are always paired to exactly one layout, though a layout may have multiple sets of links, or no links at all. To signal the association, the name of the links file must start with the name of the layout to which it is associated. For example, if a layout is called "awesome_1.csv", its associated links list(s) may be called "awesome_1.csv" (not a conflict since layouts and links are in separate folders), or "awesome_1_sometext.csv". 
+ - Links are always paired to exactly one layout, though a layout may have multiple sets of links, or no links at all. To signal the association, **the name of the links file must start with the name of the layout to which it is associated**. For example, if a layout is called "awesome_1.csv", its associated links list(s) may be called "awesome_1.csv" (not a conflict since layouts and links are in separate folders), or "awesome_1_sometext.csv". 
  - At most one labels file may be associated with a layout. The names must match exactly.
  - If the name of the layout ends with "_geo", the default view presented in the DataDiVR will feature a globe.
 
