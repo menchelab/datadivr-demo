@@ -59,7 +59,7 @@ The labels .csv file should have the following columns:
  3. z-coordinate, a floating-point decimal between 0 and 1
  4. The text of the label. **Please note that the name of the label may not contain commas.**
 
-*You can check your labels by running the **validate_links.py** script.*
+*You can check your labels by running the **validate_labels.py** script.*
 
 #### Selections
 A selection file is simply a list of nodes, one node per line. As with links, the node IDs are the 0-indexed line numbers on which the node appears.
